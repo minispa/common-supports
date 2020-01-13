@@ -20,7 +20,6 @@ import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConve
 import org.springframework.http.converter.xml.SourceHttpMessageConverter;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, Applicat
     private static final boolean jsonbPresent;
 
     static {
-        ClassLoader classLoader = WebMvcConfigurationSupport.class.getClassLoader();
+        ClassLoader classLoader = ResponseModelWebMvcConfigurer.class.getClassLoader();
         romePresent = ClassUtils.isPresent("com.rometools.rome.feed.WireFeed", classLoader);
         jaxb2Present = ClassUtils.isPresent("javax.xml.bind.Binder", classLoader);
         jackson2Present = ClassUtils.isPresent("com.fasterxml.jackson.databind.ObjectMapper", classLoader) &&
