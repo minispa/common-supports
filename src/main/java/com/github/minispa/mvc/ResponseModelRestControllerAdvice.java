@@ -2,6 +2,7 @@ package com.github.minispa.mvc;
 
 import com.github.minispa.DataModel;
 import com.github.minispa.ServiceMessageException;
+import com.github.minispa.StatusCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -26,7 +27,7 @@ public class ResponseModelRestControllerAdvice {
         if(e instanceof ServiceMessageException) {
             return serviceMessageException((ServiceMessageException) e);
         }
-        return DataModel.builder().code("-1").message(e.getMessage()).build();
+        return DataModel.builder().code(String.valueOf(StatusCode.INTERNAL_SERVER_ERROR.value())).message(e.getMessage()).build();
     }
 
 }

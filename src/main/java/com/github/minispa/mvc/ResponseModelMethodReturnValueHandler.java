@@ -1,6 +1,7 @@
 package com.github.minispa.mvc;
 
 import com.github.minispa.DataModel;
+import com.github.minispa.StatusCode;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.http.MediaType;
@@ -25,7 +26,7 @@ public class ResponseModelMethodReturnValueHandler implements HandlerMethodRetur
 
     private List<HttpMessageConverter<?>> messageConverters;
     private List<MediaType> allSupportedMediaType;
-    private String defaultDataModelCode = "0";
+    private String defaultDataModelCode = String.valueOf(StatusCode.OK.value());
 
     public ResponseModelMethodReturnValueHandler(List<HttpMessageConverter<?>> messageConverters) {
         this.messageConverters = messageConverters;
