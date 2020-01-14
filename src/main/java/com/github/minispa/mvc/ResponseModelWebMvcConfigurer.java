@@ -28,7 +28,6 @@ import java.util.List;
 @Configuration
 public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, ApplicationContextAware {
 
-
     private static final boolean romePresent;
 
     private static final boolean jaxb2Present;
@@ -74,8 +73,7 @@ public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, Applicat
         messageConverters.add(new ResourceRegionHttpMessageConverter());
         try {
             messageConverters.add(new SourceHttpMessageConverter<>());
-        }
-        catch (Throwable ex) {
+        } catch (Throwable ex) {
             // Ignore when no TransformerFactory implementation is available...
         }
         messageConverters.add(new AllEncompassingFormHttpMessageConverter());
@@ -91,8 +89,7 @@ public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, Applicat
                 builder.applicationContext(this.applicationContext);
             }
             messageConverters.add(new MappingJackson2XmlHttpMessageConverter(builder.build()));
-        }
-        else if (jaxb2Present) {
+        } else if (jaxb2Present) {
             messageConverters.add(new Jaxb2RootElementHttpMessageConverter());
         }
 
@@ -102,11 +99,9 @@ public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, Applicat
                 builder.applicationContext(this.applicationContext);
             }
             messageConverters.add(new MappingJackson2HttpMessageConverter(builder.build()));
-        }
-        else if (gsonPresent) {
+        } else if (gsonPresent) {
             messageConverters.add(new GsonHttpMessageConverter());
-        }
-        else if (jsonbPresent) {
+        } else if (jsonbPresent) {
             messageConverters.add(new JsonbHttpMessageConverter());
         }
 
@@ -124,8 +119,7 @@ public class ResponseModelWebMvcConfigurer implements WebMvcConfigurer, Applicat
             }
             messageConverters.add(new MappingJackson2CborHttpMessageConverter(builder.build()));
         }
-        ResponseModelMethodReturnValueHandler responseModelMethodReturnValueHandler = new ResponseModelMethodReturnValueHandler(messageConverters);
-        return responseModelMethodReturnValueHandler;
+        return new ResponseModelMethodReturnValueHandler(messageConverters);
     }
 
     @Override
