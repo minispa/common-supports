@@ -1,4 +1,4 @@
-package com.github.minispa.mvc;
+package com.github.minispa.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

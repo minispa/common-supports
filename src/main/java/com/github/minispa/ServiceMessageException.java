@@ -24,4 +24,8 @@ public class ServiceMessageException extends RuntimeException {
         return sb.toString();
     }
 
+    public void throwEx() {
+        throw this;
+    }
+
 }

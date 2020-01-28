@@ -1,4 +1,4 @@
-package com.github.minispa.mvc;
+package com.github.minispa.spring;
 
 import com.github.minispa.DataModel;
 import com.github.minispa.StatusCode;
