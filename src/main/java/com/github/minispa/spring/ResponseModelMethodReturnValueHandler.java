@@ -145,7 +145,7 @@ public class ResponseModelMethodReturnValueHandler implements HandlerMethodRetur
     }
 
     private ServletServerHttpResponse createOutputMessage(NativeWebRequest webRequest) {
-        final HttpServletResponse servletResponse = webRequest.getNativeRequest(HttpServletResponse.class);
+        final HttpServletResponse servletResponse = webRequest.getNativeResponse(HttpServletResponse.class);
         return new ServletServerHttpResponse(servletResponse);
     }
 
