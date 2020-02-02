@@ -1,7 +1,6 @@
-package com.minispa;
+package commons.support;
 
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 

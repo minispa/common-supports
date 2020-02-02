@@ -1,7 +1,7 @@
-package com.minispa.spring;
+package commons.support.spring;
 
-import com.minispa.DataModel;
-import com.minispa.StatusCode;
+import commons.support.DataModel;
+import commons.support.StatusCode;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.http.MediaType;

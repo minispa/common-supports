@@ -1,4 +1,4 @@
-package com.minispa.spring;
+package commons.support.spring;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
