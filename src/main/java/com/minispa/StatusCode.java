@@ -1,4 +1,4 @@
-package com.github.minispa;
+package com.minispa;
 
 public enum StatusCode {
 

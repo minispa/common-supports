@@ -1,4 +1,4 @@
-package com.github.minispa.spring;
+package com.minispa.spring;
 
 import org.hibernate.validator.HibernateValidator;
 import org.springframework.context.annotation.Bean;

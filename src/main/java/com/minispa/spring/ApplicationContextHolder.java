@@ -1,4 +1,4 @@
-package com.github.minispa.spring;
+package com.minispa.spring;
 
 import lombok.Getter;
 import org.springframework.beans.BeansException;

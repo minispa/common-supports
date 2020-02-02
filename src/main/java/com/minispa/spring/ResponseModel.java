@@ -1,4 +1,4 @@
-package com.github.minispa.spring;
+package com.minispa.spring;
 
 import org.springframework.web.bind.annotation.ResponseBody;
 

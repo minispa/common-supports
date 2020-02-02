@@ -1,8 +1,8 @@
-package com.github.minispa.spring;
+package com.minispa.spring;
 
-import com.github.minispa.DataModel;
-import com.github.minispa.ServiceMessageException;
-import com.github.minispa.StatusCode;
+import com.minispa.DataModel;
+import com.minispa.ServiceMessageException;
+import com.minispa.StatusCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
