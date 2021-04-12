@@ -1,4 +1,4 @@
-package commons.support.rocketmq;
+package common.supports.rocketmq;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

@@ -1,2 +1,2 @@
-dubboExceptionFilter=commons.support.dubbo.DubboExceptionFilter
-dubboMdcTraceFilter=commons.support.dubbo.DubboMdcTraceFilter
+dubboExceptionFilter=common.supports.dubbo.DubboExceptionFilter
+dubboMdcTraceFilter=common.supports.dubbo.DubboMdcTraceFilter

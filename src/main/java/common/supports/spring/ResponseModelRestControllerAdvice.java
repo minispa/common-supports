@@ -1,8 +1,8 @@
-package commons.support.spring;
+package common.supports.spring;
 
-import commons.support.DataModel;
-import commons.support.StatusCode;
-import commons.support.Throwables;
+import common.supports.DataModel;
+import common.supports.StatusCode;
+import common.supports.Throwables;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;

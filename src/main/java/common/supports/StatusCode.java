@@ -1,4 +1,4 @@
-package commons.support;
+package common.supports;
 
 public enum StatusCode {
 

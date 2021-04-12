@@ -1,4 +1,4 @@
-package commons.support.dubbo;
+package common.supports.dubbo;
 
 import org.apache.dubbo.common.constants.CommonConstants;
 import org.apache.dubbo.common.extension.Activate;

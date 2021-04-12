@@ -1,4 +1,4 @@
-package commons.support.spring;
+package common.supports.spring;
 
 import lombok.Getter;
 import org.springframework.beans.BeansException;

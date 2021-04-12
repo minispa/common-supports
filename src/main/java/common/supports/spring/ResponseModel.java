@@ -1,4 +1,4 @@
-package commons.support.spring;
+package common.supports.spring;
 
 import org.springframework.web.bind.annotation.ResponseBody;
 

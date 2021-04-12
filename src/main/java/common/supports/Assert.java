@@ -1,6 +1,4 @@
-package commons.support;
-
-import lombok.SneakyThrows;
+package common.supports;
 
 public class Assert {
 
