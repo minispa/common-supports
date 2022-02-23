@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class StreamRequestWrapper extends HttpServletRequestWrapper {
 
@@ -25,12 +26,18 @@ public class StreamRequestWrapper extends HttpServletRequestWrapper {
 
     @Override
     public ServletInputStream getInputStream() throws IOException {
-        return super.getInputStream();
+        if(this.input == null) {
+            return this.input = new BufferedServletInputStream(super.getInputStream());
+        }
+        return this.input;
     }
 
     @Override
     public BufferedReader getReader() throws IOException {
-        return super.getReader();
+        if(this.reader == null) {
+            this.reader = new BufferedReader(new InputStreamReader(this.getInputStream(), this.getCharacterEncoding()));
+        }
+        return this.reader;
     }
 
     private class BufferedServletInputStream extends ServletInputStream {
