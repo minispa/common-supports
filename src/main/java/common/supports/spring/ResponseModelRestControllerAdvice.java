@@ -17,6 +17,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 
 @Slf4j
+@ResponseModel
 @RestControllerAdvice
 @ResponseStatus(HttpStatus.OK)
 public class ResponseModelRestControllerAdvice {

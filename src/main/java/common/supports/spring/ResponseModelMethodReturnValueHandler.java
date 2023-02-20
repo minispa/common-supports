@@ -49,8 +49,11 @@ public class ResponseModelMethodReturnValueHandler implements HandlerMethodRetur
     @Override
     public void handleReturnValue(Object returnValue, MethodParameter returnType, ModelAndViewContainer mavContainer, NativeWebRequest webRequest) throws Exception {
         mavContainer.setRequestHandled(true);
-        returnValue = DataModel.builder().code(defaultDataModelCode).data(returnValue).build();
-        this.writeMessageConverters(returnValue, returnType, webRequest);
+        if(returnValue instanceof DataModel) {
+            this.writeMessageConverters(returnValue, returnType, webRequest);
+        } else {
+            this.writeMessageConverters(DataModel.builder().code(defaultDataModelCode).data(returnValue).build(), returnType, webRequest);
+        }
     }
 
     private <T> void writeMessageConverters(T returnValue, MethodParameter returnType, NativeWebRequest webRequest) throws IOException, HttpMediaTypeNotAcceptableException {
