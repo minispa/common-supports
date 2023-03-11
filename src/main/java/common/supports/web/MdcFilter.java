@@ -2,7 +2,7 @@ package common.supports.web;
 
 import common.supports.MixAll;
 import lombok.extern.slf4j.Slf4j;
-import org.jboss.logging.MDC;
+import org.slf4j.MDC;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
